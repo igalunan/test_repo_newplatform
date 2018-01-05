@@ -7,6 +7,10 @@ public class MyAccountPage {
 		return driver.findElement(By.cssSelector("a#cboxClose"));
 	}
 	
+	public static WebElement getMyAccountIFrame(WebDriver driver) throws NoSuchElementException {
+		return driver.findElement(By.id("modal-iframe"));
+	}
+	
 	public static WebElement getNewPasswordField(WebDriver driver) throws NoSuchElementException {
 		return driver.findElement(By.id("edit-pass-pass1"));
 	}
@@ -16,6 +20,6 @@ public class MyAccountPage {
 	}
 	
 	public static WebElement getSubmitButton(WebDriver driver) throws NoSuchElementException {
-		return driver.findElement(By.cssSelector("button#edit-submit"));
+		return driver.findElement(By.cssSelector("input#edit-submit"));
 	}
 }
