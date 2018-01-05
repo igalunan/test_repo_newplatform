@@ -16,8 +16,8 @@ public class MainNavigationActions {
 	public static void loadMyAccount(WebDriver driver, RunLogger logger) {
 		MainNavigationActions.openUserMenu(driver, logger);
 		MainNavigation.getUserMenuMyAccountLink(driver).click();
-		GenericPageAction.delay();
-		GenericPageAction.waitPageLoad(driver, 60);
+		GenericPageAction.delay(10);
+//		GenericPageAction.waitPageLoad(driver, 60);
 	}
 	
 	public static void openUserMenu(WebDriver driver, RunLogger logger) {
