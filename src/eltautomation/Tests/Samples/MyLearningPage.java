@@ -7,12 +7,12 @@ import eltautomation.Utils.ITestScript;
 import eltautomation.Utils.RunLogger;
 import eltautomation.Utils.TestScenario;
 
-public class Ken_CLMSMainTest implements ITestScript{
+public class MyLearningPage implements ITestScript{
 	private TestScenario ts;
 	private RunLogger logger;
 	private WebDriver driver;
 	
-	public Ken_CLMSMainTest(WebDriver wd, TestScenario ts, RunLogger logger) {
+	public MyLearningPage(WebDriver wd, TestScenario ts, RunLogger logger) {
 		this.driver = wd;
 		this.ts = ts;
 		this.logger = logger;

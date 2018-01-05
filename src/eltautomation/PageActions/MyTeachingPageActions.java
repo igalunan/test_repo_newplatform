@@ -5,14 +5,14 @@ import org.openqa.selenium.*;
 import eltautomation.PageObjects.*;
 import eltautomation.Utils.*;
 
-public class Ken_MyTeachingPageAct {
+public class MyTeachingPageActions {
 	
 	//#####################################################################################
 	//Action to Click the My Teaching tab in the Menu Panel
 	public static void clickMyTeaching(WebDriver driver, RunLogger logger) {
 		try {	
 				
-			Ken_MyTeachingObj.getMyTeachingNav(driver).click();
+			MyTeachingPage.getMyTeachingNav(driver).click();
 			GenericPageAction.delay();
 			GenericPageAction.waitPageLoad(driver, 60);
 			
@@ -34,7 +34,7 @@ public class Ken_MyTeachingPageAct {
 	//Validate if the My Teaching tab in the Menu Panel is Active
 	public static void validateMyTeachingNavLink(WebDriver driver, RunLogger logger) {
 	try {	
-		String mylearningclass = Ken_MyTeachingObj.getMyTeachingNav(driver).getAttribute("class");	
+		String mylearningclass = MyTeachingPage.getMyTeachingNav(driver).getAttribute("class");	
 	
 		logger.setStepDesc("Validate if my teaching navlink is active");
 		logger.setExpectedResult("My teaching navlink should be active");
@@ -75,7 +75,7 @@ public class Ken_MyTeachingPageAct {
 	public static void validateSchoolName(WebDriver driver, RunLogger logger) {
 		try {	
 			
-			String schoolName = Ken_MyTeachingObj.getSchoolName(driver).getText();
+			String schoolName = MyTeachingPage.getSchoolName(driver).getText();
 			
 			logger.setStepDesc("Validate if the School Name is zUAT Main (Level 4) Campus");
 			logger.setExpectedResult("The School Name should be zUAT Main (Level 4) Campus");

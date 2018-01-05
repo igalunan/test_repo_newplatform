@@ -2,7 +2,7 @@ package eltautomation.PageObjects;
 
 import org.openqa.selenium.*;
 
-public class Ken_MyTeachingObj {
+public class MyTeachingPage {
 	//#####################################################################################
 	//Object to validate if the My Teaching tab in the Menu Panel is Active
 	public static WebElement getMyTeachingNav(WebDriver driver) throws NoSuchElementException {
@@ -10,7 +10,7 @@ public class Ken_MyTeachingObj {
 	}
 	
 	public static WebElement getMyTeachingNavLink(WebDriver driver) throws NoSuchElementException {
-		return Ken_MyTeachingObj.getMyTeachingNav(driver).findElement(By.cssSelector("a"));
+		return MyTeachingPage.getMyTeachingNav(driver).findElement(By.cssSelector("a"));
 	}
 	
 	//#####################################################################################
@@ -21,7 +21,7 @@ public class Ken_MyTeachingObj {
 	
 	
 	public static WebElement getSchoolName(WebDriver driver) throws NoSuchElementException {
-		return Ken_MyTeachingObj.getSchoolNameNav(driver).findElement(By.cssSelector("a.class-campus"));
+		return MyTeachingPage.getSchoolNameNav(driver).findElement(By.cssSelector("a.class-campus"));
 	}
 	
 	

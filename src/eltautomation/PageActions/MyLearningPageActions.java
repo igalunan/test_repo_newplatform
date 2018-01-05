@@ -5,11 +5,11 @@ import org.openqa.selenium.*;
 import eltautomation.PageObjects.*;
 import eltautomation.Utils.*;
 
-public class Ken_MyLearningPageAct {
+public class MyLearningPageActions {
 	public static void validateMyLearningNavLink(WebDriver driver, RunLogger logger) {
 
 		try {		
-			String mylearningclass = Ken_MyLearningObj.getMyLearningNav(driver).getAttribute("class");
+			String mylearningclass = MyLearningPage.getMyLearningNav(driver).getAttribute("class");
 			
 			logger.setStepDesc("Validate if my learning navlink is active");
 			logger.setExpectedResult("My learning navlink should be active");
@@ -49,7 +49,7 @@ public class Ken_MyLearningPageAct {
 	public static void clickMyLearning(WebDriver driver, RunLogger logger) {
 		try {	
 				
-			Ken_MyLearningObj.getMyLearningNav(driver).click();
+			MyLearningPage.getMyLearningNav(driver).click();
 			GenericPageAction.delay();
 			GenericPageAction.waitPageLoad(driver, 60);
 			

@@ -14,7 +14,7 @@ import eltautomation.Utils.*;
 
 public class MainTest {
 	private static int runID;
-	private static String runtags = "DEV", runlabel = "TestOnly", executiontable = "scenarios_tbl";
+	private static String runtags = "DEV", runlabel = "KenTest", executiontable = "scenarios_ken";
 	public static ConfigFile cfile;
 	
 	public static void main(String[] args) {
