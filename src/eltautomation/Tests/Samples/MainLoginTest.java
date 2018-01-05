@@ -7,12 +7,12 @@ import eltautomation.Utils.ITestScript;
 import eltautomation.Utils.RunLogger;
 import eltautomation.Utils.TestScenario;
 
-public class Ken_CLMSMainTest implements ITestScript{
+public class MainLoginTest implements ITestScript{
 	private TestScenario ts;
 	private RunLogger logger;
 	private WebDriver driver;
 	
-	public Ken_CLMSMainTest(WebDriver wd, TestScenario ts, RunLogger logger) {
+	public MainLoginTest(WebDriver wd, TestScenario ts, RunLogger logger) {
 		this.driver = wd;
 		this.ts = ts;
 		this.logger = logger;
@@ -30,8 +30,6 @@ public class Ken_CLMSMainTest implements ITestScript{
 		Ken_MainLoginPageAct.login(driver, logger, "prodksgtea01", "cup123");
 		
 	}
-
-
 	
 	@Override
 	public void runTest() {
