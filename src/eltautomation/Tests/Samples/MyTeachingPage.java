@@ -30,8 +30,6 @@ public class MyTeachingPage implements ITestScript{
 		Ken_MainLoginPageAct.login(driver, logger, "prodksgtea01", "cup123");
 		
 	}
-
-
 	
 	@Override
 	public void runTest() {
@@ -40,16 +38,11 @@ public class MyTeachingPage implements ITestScript{
 		this.logScenario(this.ts.getID(), this.ts.getDescription());
 		
 		this.login();	
-		MyLearningPageActions.clickMyLearning(driver, logger);
-		MyLearningPageActions.validateMyLearningNavLink(driver, logger);
-		this.logUpdateScenario();
-			
-		this.logScenario(this.ts.getID() + "B", "User can navigate to My Teaching");
 		MyTeachingPageActions.clickMyTeaching(driver, logger);
 		MyTeachingPageActions.validateMyTeachingNavLink(driver, logger);
 		this.logUpdateScenario();
 		
-		this.logScenario(this.ts.getID() + "C", "User can view the Campus");
+		this.logScenario(this.ts.getID() + "B", "Validate if the teacher is able to view the default school");
 		MyTeachingPageActions.validateSchoolName(driver, logger);
 		
 		this.logout();

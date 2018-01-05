@@ -7,7 +7,7 @@ import eltautomation.Utils.*;
 
 public class MyTeachingPageActions {
 	
-	//#####################################################################################
+
 	//Action to Click the My Teaching tab in the Menu Panel
 	public static void clickMyTeaching(WebDriver driver, RunLogger logger) {
 		try {	
@@ -30,7 +30,7 @@ public class MyTeachingPageActions {
 		}
 	}
 	
-	//#####################################################################################
+
 	//Validate if the My Teaching tab in the Menu Panel is Active
 	public static void validateMyTeachingNavLink(WebDriver driver, RunLogger logger) {
 	try {	
@@ -70,8 +70,8 @@ public class MyTeachingPageActions {
 	}
 	
 
-	//#####################################################################################
-	//Validate if the teacher is able to view the school name "zUAT Main (Level 4..."
+
+	//Validate if the teacher is able to view the default school
 	public static void validateSchoolName(WebDriver driver, RunLogger logger) {
 		try {	
 			
@@ -109,10 +109,6 @@ public class MyTeachingPageActions {
 		}
 	}
 	
-	//#####################################################################################
-	//Click the Active Classes tab
-	//Validate if the Active Classes tab is active
-	//Validate the info message "To view your classes please choose a Campus or Institution from the drop-down menu above. "
 	
 	
 }
