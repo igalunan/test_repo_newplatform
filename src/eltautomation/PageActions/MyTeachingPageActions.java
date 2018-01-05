@@ -114,34 +114,5 @@ public class MyTeachingPageActions {
 }
 
 	
-	
-	
-	
-	
-	
-	
-	/*
-	 * 
-	try {	
-	//Your code here
-		
-		
-	} catch (NoSuchElementException e) {
-		try {
-			logger.logStep("User logs in",
-					"User successfully logs in",
-					"User is not logged in",
-					RunLogger.ERR, driver);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-	}
-	
-	*/
-	
-	
 
 	
