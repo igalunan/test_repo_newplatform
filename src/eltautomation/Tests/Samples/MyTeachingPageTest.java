@@ -7,12 +7,12 @@ import eltautomation.Utils.ITestScript;
 import eltautomation.Utils.RunLogger;
 import eltautomation.Utils.TestScenario;
 
-public class MyTeachingPage implements ITestScript{
+public class MyTeachingPageTest implements ITestScript{
 	private TestScenario ts;
 	private RunLogger logger;
 	private WebDriver driver;
 	
-	public MyTeachingPage(WebDriver wd, TestScenario ts, RunLogger logger) {
+	public MyTeachingPageTest(WebDriver wd, TestScenario ts, RunLogger logger) {
 		this.driver = wd;
 		this.ts = ts;
 		this.logger = logger;
@@ -42,7 +42,7 @@ public class MyTeachingPage implements ITestScript{
 		MyTeachingPageActions.validateMyTeachingNavLink(driver, logger);
 		this.logUpdateScenario();
 		
-		this.logScenario(this.ts.getID() + "B", "Validate if the teacher is able to view the default school");
+		this.logScenario(this.ts.getID() + "B", "Validate if user is able to view the default school");
 		MyTeachingPageActions.validateSchoolName(driver, logger);
 		
 		this.logout();

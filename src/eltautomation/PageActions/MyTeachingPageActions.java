@@ -36,14 +36,14 @@ public class MyTeachingPageActions {
 	try {	
 		String mylearningclass = MyTeachingPage.getMyTeachingNav(driver).getAttribute("class");	
 	
-		logger.setStepDesc("Validate if my teaching navlink is active");
-		logger.setExpectedResult("My teaching navlink should be active");
+		logger.setStepDesc("Validate if My Teaching navlink is active");
+		logger.setExpectedResult("My Teaching navlink should be active");
 		
 		if (mylearningclass.contains("active")) {
-			logger.setActualResult("My teaching navlink is active");
+			logger.setActualResult("My Teaching navlink is active");
 			logger.setStepMark(RunLogger.PASS);
 		} else {
-			logger.setActualResult("My teaching navlink is not active");
+			logger.setActualResult("My Teaching navlink is NOT active");
 			logger.setStepMark(RunLogger.FAIL);
 		}
 		
@@ -77,14 +77,14 @@ public class MyTeachingPageActions {
 			
 			String schoolName = MyTeachingPage.getSchoolName(driver).getText();
 			
-			logger.setStepDesc("Validate if the School Name is zUAT Main (Level 4) Campus");
-			logger.setExpectedResult("The School Name should be zUAT Main (Level 4) Campus");
+			logger.setStepDesc("Validate if the user is able to view the School Name");
+			logger.setExpectedResult("User should be able to view the School Name");
 			
 			if (schoolName.contains("zUAT Main (Level 4...")) {
-				logger.setActualResult("The School Name is zUAT Main (Level 4) Campus");
+				logger.setActualResult("User is able to view the School Name");
 				logger.setStepMark(RunLogger.PASS);
 			} else {
-				logger.setActualResult("The School Name is NOT zUAT Main (Level 4) Campus");
+				logger.setActualResult("User is NOT able to view the School Name");
 				logger.setStepMark(RunLogger.FAIL);
 			}
 			
