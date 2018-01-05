@@ -14,4 +14,8 @@ public class MyAccountPage {
 	public static WebElement confirmPasswordField(WebDriver driver) throws NoSuchElementException {
 		return driver.findElement(By.id("edit-pass-pass2"));
 	}
+	
+	public static WebElement submitButton(WebDriver driver) throws NoSuchElementException {
+		return driver.findElement(By.cssSelector("button#edit-submit"));
+	}
 }
