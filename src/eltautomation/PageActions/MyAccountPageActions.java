@@ -13,6 +13,8 @@ public class MyAccountPageActions {
 	
 	public static void changePassword(WebDriver driver, RunLogger logger, String pword) {
 		try {
+			driver.switchTo().frame(MyAccountPage.getMyAccountIFrame(driver));
+			
 			MyAccountPageActions.enterPassword(driver, logger, MyAccountPage.getNewPasswordField(driver), pword, 
 					"User should be able to enter a password in the New Password field");
 			
@@ -20,8 +22,6 @@ public class MyAccountPageActions {
 					"User should be able to enter a password in the Confirm Password field");
 			
 			MyAccountPageActions.submit(driver, logger);
-			
-			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -29,7 +29,6 @@ public class MyAccountPageActions {
 	
 	public static void enterPassword(WebDriver driver, RunLogger logger, WebElement pwordField, String pword, String stepDesc) {
 		try {
-			logger.setPreStepScreenshot(driver);
 			pwordField.sendKeys(pword);
 			logger.logStep(stepDesc,
 					"Password should be entered: " +pword,
@@ -51,7 +50,6 @@ public class MyAccountPageActions {
 	
 	public static void submit(WebDriver driver, RunLogger logger) {
 		try {
-			logger.setPreStepScreenshot(driver);
 			MyAccountPage.getSubmitButton(driver).click();
 			
 			GenericPageAction.delay();
