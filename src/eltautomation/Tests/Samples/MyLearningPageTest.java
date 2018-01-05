@@ -35,7 +35,7 @@ public class MyLearningPageTest implements ITestScript{
 	public void runTest() {
 		// TODO Auto-generated method stub
 		
-		this.logScenario(this.ts.getID(), this.ts.getDescription());
+		this.logScenario(this.ts.getID() + "A", "Validate if My Learning navlink is active");
 		
 		this.login();	
 		MyLearningPageActions.clickMyLearning(driver, logger);
