@@ -31,8 +31,6 @@ public class MyLearningPage implements ITestScript{
 		
 	}
 
-
-	
 	@Override
 	public void runTest() {
 		// TODO Auto-generated method stub
@@ -44,14 +42,8 @@ public class MyLearningPage implements ITestScript{
 		MyLearningPageActions.validateMyLearningNavLink(driver, logger);
 		this.logUpdateScenario();
 			
-		this.logScenario(this.ts.getID() + "B", "User can navigate to My Teaching");
-		MyTeachingPageActions.clickMyTeaching(driver, logger);
-		MyTeachingPageActions.validateMyTeachingNavLink(driver, logger);
-		this.logUpdateScenario();
-		
-		this.logScenario(this.ts.getID() + "C", "User can view the Campus");
-		MyTeachingPageActions.validateSchoolName(driver, logger);
-		
+		this.logScenario(this.ts.getID() + "B", "Validate if user is able to view the My Learning header");
+		MyLearningPageActions.validateMyLearningHeader(driver, logger);
 		this.logout();
 		this.logUpdateScenario();
 		
